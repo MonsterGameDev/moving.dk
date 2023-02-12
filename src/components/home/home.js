@@ -7,9 +7,7 @@ class HomeSection {
 
         const homeSection = document.createElement('section');
         homeSection.classList.add('home-section');
-        const heading = document.createElement('h1');
-        heading.innerHTML = "Moving  DK";
-        homeSection.appendChild(heading);
+
         const homeBackground = document.createElement('img');
         homeBackground.src = HomeBackground;
         homeSection.appendChild(homeBackground);

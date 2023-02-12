@@ -1,0 +1,19 @@
+$font-color: red;
+$background-color: green;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home-section {
+  width: 100wv;
+  height: 98vh;
+  background-color: $background-color;
+
+  h1 {
+    color: $font-color;
+  }
+}

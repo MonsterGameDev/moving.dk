@@ -1,5 +1,3 @@
-$font-color: red;
-$background-color: green;
 *,
 *::after,
 *::before {
@@ -9,11 +7,9 @@ $background-color: green;
 }
 
 .home-section {
-  width: 100wv;
-  height: 98vh;
-  background-color: $background-color;
+  width: 100vw;
+  height: 100vh;
 
-  h1 {
-    color: $font-color;
-  }
+  background-image: url("/src/img/2a.jpg");
+  background-size: cover;
 }

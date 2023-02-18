@@ -28,6 +28,16 @@ module.exports = {
                 use: [
                     'handlebars-loader'
                 ]
+            },
+            {
+                test: /\.tff$/,
+                use: {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/',
+                  },
+                },
             }
 
         ]

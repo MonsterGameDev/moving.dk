@@ -1,5 +1,6 @@
 //import HomeBackground from './../../img/2a.jpg';
 import './home.scss';
+import LOGO from './../../img/moving-dk-logo.png'
 
 class HomeSection {
 
@@ -41,6 +42,24 @@ class HomeSection {
         'Opbevaring'
     ];
 
+    logoKFs =
+        [
+            {
+                transform: "scale(0) rotateX(0deg)",
+                opacity: 0
+            },
+            {
+                transform: "scale(1) rotateX(720deg)"
+            }
+        ]
+
+    logoAnimationOptions = {
+        delay: 3500,
+        duration: 1000,
+        easeing: "ease-out",
+        fill: "backwards"
+    }
+
     render() {
         const body = document.querySelector('body');
 
@@ -77,6 +96,13 @@ class HomeSection {
         });
 
         grayBox.appendChild(punshlineContainer);
+
+        const logo = document.createElement('img');
+        logo.src = LOGO;
+        logo.classList.add('logo')
+        logo.animate(this.logoKFs, this.logoAnimationOptions);
+        grayBox.appendChild(logo);
+
 
         homeSection.appendChild(grayBox);
         grayBox.animate(this.keyframes, this.options);

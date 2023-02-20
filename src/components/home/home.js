@@ -5,8 +5,8 @@ import LOGO from './../../img/moving-dk-logo.png'
 class HomeSection {
 
     keyframes = [
-        { transform: "scaleX(0) scaleY(0)" },
-        { transform: "scaleX(1) scaleY(1)" },
+        { transform: "scale(0)" },
+        { transform: "scale(1)" },
     ];
 
     options = {

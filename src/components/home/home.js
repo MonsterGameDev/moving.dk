@@ -105,10 +105,12 @@ class HomeSection {
 
 
         homeSection.appendChild(grayBox);
-        grayBox.animate(this.keyframes, this.options);
+
         listHeading.animate(this.opacityKFs, this.punshlineHeadingOptions);
 
         body.appendChild(homeSection);
+
+        grayBox.animate(this.keyframes, this.options);
 
     }
 

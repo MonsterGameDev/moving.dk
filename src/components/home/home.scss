@@ -23,24 +23,31 @@
 
   background-image: url("/src/img/2a.webp");
   background-size: cover;
+
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .gray-box {
   width: 400px;
   height: 600px;
   background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  right: 150px;
+  top: 150px;
 
   @media only screen and (max-width: 600px) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 95vw;
+    width: 85vw;
+    height: 75vh;
+    position: relative;
+    right: unset;
+    top: unset;
   }
   border-radius: 10px;
-  
-  // right: 150px;
-  // top: 150px;
 
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,

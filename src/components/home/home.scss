@@ -14,6 +14,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  font-size: 65.5%;
+
+  --primary-color: #014d4e;
+  --secondary-color: #ff9408;
+  --secondary-color-m: #ff94088e;
+  --tertiary-color: #017374;
+  --tertiary-color-m: #01727498;
+}
 
 .home-section {
   position: relative;
@@ -23,71 +32,75 @@
 
   background-image: url("/src/img/2a.webp");
   background-size: cover;
+  background-position-y: center;
+  background-repeat: no-repeat;
 
-  @media only screen and (max-width: 600px) {
-    position: relative;
+  .gray-box {
+    position: absolute;
+    top: 5vh;
+    right: 10vh;
+
+    height: 90vh;
+    width: 60vh;
+    padding: 4vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+
+    border: 2px solid rgb(41, 40, 40);
+    border-radius: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 0 calc(2vh + 1rem);
+
+    color: rgba(255, 255, 255, 0.85);
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+
+    .punshline-heading {
+      display: flex;
+      align-items: center;
+
+      height: 15%;
+      font-size: 4vh;
+      font-family: PoppinsHeading;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .punshline-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: left;
+
+      height: 60%;
+      padding: 0 1vh;
+
+      font-family: Poppins;
+
+      .punshline {
+        white-space: nowrap;
+        font-size: 3vh;
+      }
+    }
+
+    .logo {
+      margin-top: 2rem;
+    }
   }
 }
 
-.gray-box {
-  width: 400px;
-  height: 600px;
-  background-color: rgba(0, 0, 0, 0.4);
-  position: absolute;
-  right: 150px;
-  top: 150px;
-
-  @media only screen and (max-width: 600px) {
-    width: 85vw;
-    height: 75vh;
-    position: relative;
-    right: unset;
-    top: unset;
-  }
-  border-radius: 10px;
-
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  padding: 0 55px;
-  border: 2px solid rgb(41, 40, 40);
-
-  font-size: 32px;
-  color: rgba(255, 255, 255, 0.85);
-
-  display: flex;
-  flex-direction: column;
-
-  .punshline-heading {
-    font-size: 35px;
-    height: 15%;
-    text-transform: uppercase;
-    padding-top: 30px;
-    margin-left: -10px;
-
-    font-family: PoppinsHeading;
-    letter-spacing: 3px;
-  }
-
-  .punshline-container {
+@media screen and (orientation: "portrait") {
+  .home-section {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: left;
-    height: 60%;
-
-    font-family: Poppins;
-    font-size: 20px;
-
-    .punshline {
-      white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    .gray-box {
+      position: unset;
+      width: 90vw;
     }
-  }
-
-  .logo {
-    margin-top: 20px;
   }
 }

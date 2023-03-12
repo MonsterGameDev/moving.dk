@@ -1,6 +1,6 @@
 //import HomeBackground from './../../img/2a.jpg';
 import './home.scss';
-import LOGO from './../../img/moving-dk-logo.png'
+import IMAGES from './../../img/index.js'
 
 class HomeSection {
 
@@ -8,7 +8,6 @@ class HomeSection {
         { transform: "scale(0)" },
         { transform: "scale(1)" },
     ];
-
     options = {
         duration: 1000,
         iterations: 1,
@@ -16,7 +15,6 @@ class HomeSection {
         fill: 'backwards',
         easing: 'cubic-bezier(0,.78,.61,1.86)',
     };
-
     opacityKFs = [
         { opacity: 0 }, { opacity: 1 }
     ];
@@ -60,11 +58,20 @@ class HomeSection {
         fill: "backwards"
     }
 
+    constructor() {
+        this.picrow;
+    }
+
     render() {
         const body = document.querySelector('body');
 
         const homeSection = document.createElement('section');
         homeSection.classList.add('home-section');
+        homeSection.setAttribute('id', 'home-section');
+
+        const header = document.createElement('header')
+        header.classList.add('header');
+
 
         const grayBox = document.createElement('div');
         grayBox.classList.add('gray-box');
@@ -98,20 +105,85 @@ class HomeSection {
         grayBox.appendChild(punshlineContainer);
 
         const logo = document.createElement('img');
-        logo.src = LOGO;
+        logo.src = IMAGES.Logo;
         logo.classList.add('logo')
         logo.animate(this.logoKFs, this.logoAnimationOptions);
         grayBox.appendChild(logo);
 
 
-        homeSection.appendChild(grayBox);
+        header.appendChild(grayBox);
 
         listHeading.animate(this.opacityKFs, this.punshlineHeadingOptions);
 
-        body.appendChild(homeSection);
+        homeSection.appendChild(header);
+
+        this.picRow = document.createElement('section');
+        this.picRow.classList.add('pics-section');
+
+        const picCell1 = document.createElement('div');
+        picCell1.classList.add('picrow');
+        picCell1.classList.add('pic1');
+        picCell1.classList.add('fromLeft');
+        this.picRow.appendChild(picCell1);
+
+        const picCell2 = document.createElement('div');
+        picCell2.classList.add('picrow');
+        picCell2.classList.add('pic2');
+        picCell2.classList.add('fadeTextboxIn');
+        picCell2.innerHTML = `
+        <div class="pic2-header">Tillid, Tryghed og Professionalisme</div>
+        <div class="pic2-text">Tre vigtige ord når du lægger dine ejendele i hænderne på en fremmed.<br /> Vi passer på dine ting som var de vore egne, håndterer dem professionelt og sikkert! <br /><br />Hele vejen fra deres gamle til deres nye hjem</div> 
+        `;
+        this.picRow.appendChild(picCell2);
+
+        const picCell3 = document.createElement('div');
+        picCell3.classList.add('picrow');
+        picCell3.classList.add('pic3');
+        picCell3.classList.add('fromRight');
+        this.picRow.appendChild(picCell3);
+
+        homeSection.appendChild(this.picRow);
+
+        body.appendChild(homeSection)
 
         grayBox.animate(this.keyframes, this.options);
 
+        // Intersection Observer PicRow
+        this.picRowIntersection();
+        this.zoomBackgroundOnScroll()
+
+    }
+
+    picRowIntersection() {
+        let options = {
+            threshold: 1.0,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    document.querySelector('.fromLeft').classList.add('done');
+                    document.querySelector('.fromRight').classList.add('done');
+                    document.querySelector('.fadeTextboxIn').classList.add('done');
+                    document.querySelector('.gray-box').animate([{ transform: 'scale(1)' }, { transform: 'scale(0)' }], {
+                        duration: 1000,
+                        iterations: 1,
+                        fill: 'forwards'
+                    });
+                }
+            })
+        }, options);
+        observer.observe(document.querySelector('.pics-section'));
+    }
+
+    zoomBackgroundOnScroll() {
+        const bg = document.getElementById('home-section')
+        window.addEventListener('scroll', () => {
+            bg.style.backgroundSize = 190 - +window.scrollY / 12 + '%';
+        })
     }
 
 

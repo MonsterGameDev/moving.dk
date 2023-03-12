@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./../../fonts/poppins/Poppins-Light.ttf") format("truetype");
+}
+
+.about-section {
+  padding: 4rem 0;
+  width: 90vw;
+  margin: 0 auto;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.columns {
+  margin-top: 3rem;
+  display: flex;
+}
+
+.col + .col {
+  margin-left: 1.5rem;
+}
+
+h2,
+h3 {
+  font-family: PoppinsHeading;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}

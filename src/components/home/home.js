@@ -3,7 +3,6 @@ import './home.scss';
 import IMAGES from './../../img/index.js'
 
 class HomeSection {
-
     keyframes = [
         { transform: "scale(0)" },
         { transform: "scale(1)" },
@@ -60,6 +59,9 @@ class HomeSection {
 
     constructor() {
         this.picrow;
+        this.bg;
+        this.landscapeScroll;
+
     }
 
     render() {
@@ -150,7 +152,17 @@ class HomeSection {
 
         // Intersection Observer PicRow
         this.picRowIntersection();
-        this.zoomBackgroundOnScroll()
+
+        // Scroll
+        this.bg = document.getElementById('home-section');
+        this.landscapeScroll = () => this.bg.style.backgroundSize = 190 - +window.scrollY / 12 + '%';
+        this.setUpScrollevents();
+
+
+
+        screen.orientation.addEventListener('change', this.setUpScrollevents.bind(this));
+
+
 
     }
 
@@ -168,22 +180,35 @@ class HomeSection {
                     document.querySelector('.fromLeft').classList.add('done');
                     document.querySelector('.fromRight').classList.add('done');
                     document.querySelector('.fadeTextboxIn').classList.add('done');
-                    document.querySelector('.gray-box').animate([{ transform: 'scale(1)' }, { transform: 'scale(0)' }], {
-                        duration: 1000,
-                        iterations: 1,
-                        fill: 'forwards'
-                    });
+                    // document.querySelector('.gray-box').animate([{ transform: 'scale(1)' }, { transform: 'scale(0)' }], {
+                    //     duration: 1000,
+                    //     iterations: 1,
+                    //     fill: 'forwards'
+                    // });
                 }
             })
         }, options);
         observer.observe(document.querySelector('.pics-section'));
     }
 
-    zoomBackgroundOnScroll() {
-        const bg = document.getElementById('home-section')
-        window.addEventListener('scroll', () => {
-            bg.style.backgroundSize = 190 - +window.scrollY / 12 + '%';
-        })
+
+
+    setUpScrollevents() {
+        switch (screen.orientation.type) {
+            case 'landscape-primary':
+            case 'landscape-secondary': {
+                this.bg.style.backgroundSize = '190%';
+                window.addEventListener('scroll', this.landscapeScroll)
+                break;
+            } default: {
+                window.removeEventListener('scroll', this.landscapeScroll);
+                this.bg.style.backgroundSize = 'cover';
+                break;
+            }
+        }
+
+
+
     }
 
 

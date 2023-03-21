@@ -62,9 +62,7 @@
 
   .montage {
     .image-container {
-      //background-image: url("/src/img/montage.jpg");
-      //background-image: url("/src/img/moebel-montage-2.webp");
-      background-image: url("/src/img/moebel-montage.jpg");
+      background-image: url("/src/img/webp/moebel-montage.webp");
     }
     .image-text {
       background-color: #d7c59f;
@@ -72,9 +70,7 @@
   }
   .koersel {
     .image-container {
-      background-image: url("/src/img/koersel-af-flyttelaes.jpg");
-      //background-image: url("/src/img/koersel-af-flyttelaes-2.jpg");
-      //background-image: url("/src/img/koersel-af-flyttelaes-3.jpg");
+      background-image: url("/src/img/webp/koersel-af-flyttelaes.webp");
     }
     .image-text {
       background-color: #b6a1bb;
@@ -82,7 +78,7 @@
   }
   .flytning {
     .image-container {
-      background-image: url("/src/img/flytning.jpg");
+      background-image: url("/src/img/webp/flytning.webp");
     }
     .image-text {
       background-color: #c0d3e4;
@@ -90,7 +86,7 @@
   }
   .besigtigelse {
     .image-container {
-      background-image: url("/src/img/inspection.jpg");
+      background-image: url("/src/img/webp/inspection.webp");
     }
     .image-text {
       background-color: #d6c9b9;
@@ -98,7 +94,7 @@
   }
   .kasser {
     .image-container {
-      background-image: url("/src/img/gratis-flyttekasser-2.jpg");
+      background-image: url("/src/img/webp/gratis-flyttekasser.webp");
     }
     .image-text {
       background-color: #013360;
@@ -107,7 +103,7 @@
   }
   .opbevaring {
     .image-container {
-      background-image: url("/src/img/opbevaring.jpg");
+      background-image: url("/src/img/webp/opbevaring.webp");
     }
     .image-text {
       background-color: #e6956d;
@@ -129,24 +125,4 @@
     transform: translateX(0);
     opacity: 1;
   }
-
-  // .row:nth-child(0),
-  // .row:nth-child(2),
-  // .row:nth-child(4),
-  // .row:nth-child(6),
-  // .row:nth-child(8) {
-  //   .image-text {
-  //     background-color: orange;
-  //   }
-  // }
-
-  // .row:nth-child(1),
-  // .row:nth-child(3),
-  // .row:nth-child(5),
-  // .row:nth-child(7),
-  // .row:nth-child(9) {
-  //   .image-text {
-  //     background-color: teal;
-  //   }
-  // }
 }

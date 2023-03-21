@@ -50,8 +50,8 @@ class RowOfPictures extends HTMLElement {
     }
 
     connectedCallback() {
-        this.pic1.style.backgroundImage = `url(${Images.default.FlytteMaend})`;
-        this.pic3.style.backgroundImage = `url(${Images.default.UngtPar})`;
+        this.pic1.style.backgroundImage = `url(${Images.default.FlytteMaendPicRow})`;
+        this.pic3.style.backgroundImage = `url(${Images.default.UngtParPicRow})`;
     }
 
 

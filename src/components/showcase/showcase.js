@@ -10,7 +10,6 @@ class ShowCaseSection {
         this.showcaseSection = document.createElement('section');
         this.showcaseSection.classList.add('showcase-section');
         this.showcaseSection.innerHTML = `
-            <div>x</div>
             <h2 class="section-header">Services</h2>
             <div class="row montage">
                 <div class="image-container col1"></div>

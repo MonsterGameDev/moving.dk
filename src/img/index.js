@@ -6,6 +6,9 @@ import Inspection from './webp/inspection.webp'
 import Montage from './webp/moebel-montage.webp'
 import Opbevaring from './webp/2flyttemaend.webp'
 import Logo from './moving-dk-logo.png';
+import AlexLager from './alex-pic1.webp';
+import AlexLift1 from './alex-pic2.webp';
+import AlexLift2 from './alex-pic3.webp';
 
 export default {
     FlytteMaendPicRow,
@@ -15,7 +18,10 @@ export default {
     Inspection,
     Montage,
     Opbevaring,
-    Logo
+    Logo,
+    AlexLager,
+    AlexLift1,
+    AlexLift2
 }
 
 

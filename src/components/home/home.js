@@ -74,10 +74,8 @@ class HomeSection {
         const header = document.createElement('header')
         header.classList.add('header');
 
-
         const grayBox = document.createElement('div');
         grayBox.classList.add('gray-box');
-
 
         const listHeading = document.createElement('span');
         listHeading.innerHTML = this.puhchlineHeading;
@@ -123,13 +121,13 @@ class HomeSection {
         this.picRow.classList.add('pics-section');
 
         const picCell1 = document.createElement('div');
-        picCell1.classList.add('picrow');
+        picCell1.classList.add('pic');
         picCell1.classList.add('pic1');
         picCell1.classList.add('fromLeft');
         this.picRow.appendChild(picCell1);
 
         const picCell2 = document.createElement('div');
-        picCell2.classList.add('picrow');
+        picCell2.classList.add('pic');
         picCell2.classList.add('pic2');
         picCell2.classList.add('fadeTextboxIn');
         picCell2.innerHTML = `
@@ -139,7 +137,7 @@ class HomeSection {
         this.picRow.appendChild(picCell2);
 
         const picCell3 = document.createElement('div');
-        picCell3.classList.add('picrow');
+        picCell3.classList.add('pic');
         picCell3.classList.add('pic3');
         picCell3.classList.add('fromRight');
         this.picRow.appendChild(picCell3);
@@ -156,20 +154,13 @@ class HomeSection {
         // Scroll
         this.bg = document.getElementById('home-section');
         this.landscapeScroll = () => this.bg.style.backgroundSize = 190 - +window.scrollY / 12 + '%';
-        this.setUpScrollevents();
-
-
-
-        screen.orientation.addEventListener('change', this.setUpScrollevents.bind(this));
-
-
+        this.setUpUIEvents();
 
     }
 
     picRowIntersection() {
         let options = {
             threshold: 1.0,
-            rootMargin: '0px 0px -100px 0px'
         };
 
         let observer = new IntersectionObserver(entries => {
@@ -180,11 +171,6 @@ class HomeSection {
                     document.querySelector('.fromLeft').classList.add('done');
                     document.querySelector('.fromRight').classList.add('done');
                     document.querySelector('.fadeTextboxIn').classList.add('done');
-                    // document.querySelector('.gray-box').animate([{ transform: 'scale(1)' }, { transform: 'scale(0)' }], {
-                    //     duration: 1000,
-                    //     iterations: 1,
-                    //     fill: 'forwards'
-                    // });
                 }
             })
         }, options);
@@ -193,21 +179,14 @@ class HomeSection {
 
 
 
-    setUpScrollevents() {
-        switch (screen.orientation.type) {
-            case 'landscape-primary':
-            case 'landscape-secondary': {
-                this.bg.style.backgroundSize = '190%';
-                window.addEventListener('scroll', this.landscapeScroll)
-                break;
-            } default: {
-                window.removeEventListener('scroll', this.landscapeScroll);
-                this.bg.style.backgroundSize = 'cover';
-                break;
-            }
+    setUpUIEvents() {
+        if (window.matchMedia('(orientation: portrait)').matches) {
+            window.removeEventListener('scroll', this.landscapeScroll);
+            this.bg.style.backgroundSize = 'cover';
+        } else {
+            this.bg.style.backgroundSize = '190%';
+            window.addEventListener('scroll', this.landscapeScroll)
         }
-
-
 
     }
 

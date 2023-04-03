@@ -33,12 +33,12 @@
 }
 
 .home-section {
-  background-image: url("/src/img/2a-flipped.png");
+  background-image: url("/src/img/2a-flipped.png"),
+    linear-gradient(to bottom, #7fcaf2 99px, black 20px);
   background-size: 190%;
   background-position: left 20%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #87cff5;
 }
 
 .header {
@@ -117,7 +117,7 @@
   );
   overflow: hidden;
 
-  .picrow {
+  .pic {
     width: 33.3%;
     height: 100%;
     background-size: cover;
@@ -155,7 +155,7 @@
   .fadeTextboxIn {
     opacity: 0;
     transform: scale(5);
-    transition: opacity 2s ease-in;
+    transition: opacity 1s ease-out;
   }
   .fromLeft {
     transform: translateX(-200px);
@@ -170,6 +170,9 @@
 }
 
 @media screen and (orientation: "portrait") {
+  .home-section {
+    background-size: cover !important;
+  }
   .header {
     display: flex;
     justify-content: center;
@@ -177,6 +180,17 @@
     .gray-box {
       position: unset;
       width: 90vw;
+    }
+  }
+
+  .pics-section {
+    .pic1,
+    .pic3 {
+      display: none;
+    }
+
+    .pic2 {
+      width: 100%;
     }
   }
 }

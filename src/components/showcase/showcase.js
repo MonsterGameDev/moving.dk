@@ -86,8 +86,8 @@ class ShowCaseSection {
     }
 
     _showCaseSlideIn() {
-        const showCaseSlideInOptions = {
-            threshold: 0.5,
+        const observerOptions = {
+            threshold: 0.2,
         }
 
         let observer = new IntersectionObserver(entries => {
@@ -101,7 +101,7 @@ class ShowCaseSection {
                     // document.querySelector('.col2').classList.add('showcase-slide-in');
                 }
             })
-        }, showCaseSlideInOptions);
+        }, observerOptions);
 
         observer.observe(document.querySelector('.montage'));
         observer.observe(document.querySelector('.koersel'));

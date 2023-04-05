@@ -1,59 +1,236 @@
 .contact-section {
-  border: 2px solid black;
   width: 100%;
   height: 100vh;
-  padding-top: 10vw;
-  .form-container {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 50vw;
-    height: 50vh;
+  font-family: PoppinsNormal;
 
-    h2 {
-      font-family: Poppins;
-      font-size: 10vw;
-      text-transform: uppercase;
-      text-align: center;
-      padding-top: 5vh;
-    }
-    .form-text {
-      font-family: PoppinsLight;
-      font-size: 2vw;
-      text-align: center;
-      margin: 4rem;
-    }
-    form {
+  background-image: url("./../../img/alex-pic1.webp");
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5) 50%;
+  }
+
+  // #form-area {
+  //   width: 50%;
+  //   height: 100%;
+  //   position: relative;
+  //   z-index: 100;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  //   .form-container {
+  //     width: 60%;
+  //     padding: 5%;
+  //     background: rgba(255, 255, 266, 0.5);
+  //     border-radius: 10px;
+
+  //     h2 {
+  //       font-family: Poppins;
+  //       font-size: 3vw;
+  //       color: #333;
+  //       margin-bottom: 2vw;
+  //     }
+
+  //     .form-text {
+  //       margin-bottom: 2vw;
+  //       font-size: 1.2vw;
+  //     }
+
+  //     form {
+  //       .field-container {
+  //         width: 100%;
+  //         display: flex;
+  //         flex-direction: column;
+  //         margin-bottom: 1vw;
+
+  //         label {
+  //           font-size: 1.2vw;
+  //         }
+
+  //         input {
+  //           font-size: 1.2vw;
+  //           height: 2.5vw;
+  //           border-radius: 5px;
+  //           padding-left: 0.5vw;
+  //         }
+
+  //         textarea {
+  //           height: 10vh;
+  //           font-size: 1.2vw;
+  //           border: 2px solid #333;
+  //           border-radius: 5px;
+  //           padding-left: 0.5vw;
+  //         }
+  //       }
+  //       .cta {
+  //         display: flex;
+  //         justify-content: space-between;
+  //         margin-top: 2vw;
+
+  //         button {
+  //           width: 40%;
+  //           height: 4rem;
+  //           border-radius: 5px;
+
+  //           &:disabled {
+  //             background-color: grey;
+  //             border: 2px solid darkgray;
+  //             color: #eee;
+  //           }
+  //         }
+
+  //         .submit {
+  //           background-color: darkgreen;
+  //         }
+
+  //         .reset {
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+
+  #contact-info {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #contact-info-content {
+      width: 100%;
+      height: 60%;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      .field-container {
+
+      #logo {
+        width: 100%;
+        height: 40%;
+        background-image: url("./../../img/moving-dk-logo.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .divider {
+        width: 100%;
+        height: 3px;
+        background-color: #eee;
+      }
+
+      #text-content {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        margin-bottom: 2vh;
-        label {
-          font-family: PoppinsLight;
+
+        justify-content: space-around;
+        padding-top: 3vh;
+        color: #eee;
+
+        #data {
+          display: flex;
+          flex-direction: column;
           font-size: 1.7vw;
+
+          max-height: 100%;
         }
-        input {
-          border: 1px solid #333;
-          border-radius: 7px;
-          font-family: PoppinsLight;
-          font-size: 2vw;
-          padding: 0.5vw;
-        }
-        textarea {
-          border: 1px solid #333;
-          border-radius: 7px;
-          font-family: PoppinsLight;
-          font-size: 2vw;
-          padding: 0.5vw;
-          height: 10vh;
+
+        #social-links {
+          display: flex;
+          align-items: flex-end;
+          font-size: 4vw;
+
+          span {
+            padding: 0 1vw;
+            transition: all 0.3s ease-out;
+            cursor: pointer;
+
+            &:first-of-type {
+              font-size: 3vw;
+              padding-bottom: 0.8vw;
+            }
+            &:hover {
+              color: rgb(72, 121, 245);
+              transform: scale(1.2);
+            }
+          }
         }
       }
-      .cta {
-        button {
+    }
+  }
+}
+
+@media (orientation: "portrait") {
+  .contact-section {
+    height: 100vh;
+    &::before {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    //  #form-area,
+    #contact-info {
+      width: 100% !important;
+      height: 100vh;
+    }
+
+    // .form-container {
+    //   width: 80% !important;
+    //   min-height: 80vh;
+
+    //   h2 {
+    //     font-size: 6vh !important;
+    //   }
+
+    //   .form-text {
+    //     font-size: 2vh !important;
+    //   }
+
+    //   .field-container {
+    //     label {
+    //       font-size: 2vh !important;
+    //     }
+    //     input {
+    //       font-size: 2vh !important;
+    //       height: 4vh !important;
+    //     }
+    //     textarea {
+    //     }
+    //   }
+    // }
+
+    #contact-area {
+      transform: translateX(-10vh);
+    }
+
+    #logo {
+      width: 70% !important;
+      align-self: center;
+      margin-bottom: 5vh;
+    }
+
+    #data {
+      font-size: 1.8vh !important;
+    }
+    #social-links {
+      span {
+        font-size: 4.8vh !important;
+
+        &:first-of-type {
+          font-size: 4.4vh !important;
+          margin-right: 2vh;
         }
       }
     }

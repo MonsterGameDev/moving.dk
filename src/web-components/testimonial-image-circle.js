@@ -127,7 +127,6 @@ class TestimonialImageCircle extends HTMLElement {
 
     set config(val) {
         if (!val) return;
-        console.log('inc: ', val);
         this._config = val;
         this.render()
     }

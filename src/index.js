@@ -1,3 +1,5 @@
+import './main.scss';
+
 import HomeSection from './components/home/home.js';
 import ShowCaseSection from './components/showcase/showcase.js'
 import ContactForm from './components/contact/contact.js';

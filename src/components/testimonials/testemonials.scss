@@ -16,13 +16,6 @@
     background-size: cover;
     opacity: 0.2;
   }
-
-  h2 {
-    font-family: Poppins;
-    font-size: 10vw;
-    text-transform: uppercase;
-    text-align: center;
-  }
 }
 
 .testimonial-list {
@@ -37,12 +30,19 @@ ph-testimonial-image-circle {
   width: 40vw;
   --circle-diameter: 100px;
   --background-color: rgba(0, 0, 0, 0.5);
-  --font-color: black;
-  --font-family: PoppinsLight;
+  --font-color: #eee;
+  --font-family: PoppinsNormal;
   --heading-font-family: Poppins;
 }
 
 @media (orientation: portrait) {
+  h2 {
+    height: 10%;
+  }
+
+  .testimonial-list {
+    height: 90%;
+  }
   ph-testimonial-image-circle {
     width: 90vw;
     --circle-diameter: 150px;
@@ -88,6 +88,22 @@ ph-testimonial-image-circle {
   h2 {
     margin-top: 20px;
   }
+  ph-testimonial-image-circle {
+    width: 90vw;
+    --circle-diameter: 90px;
+    margin-bottom: 3vw;
+  }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 844px) and (orientation: landscape) {
+  .testimonial-section {
+    height: fit-content !important;
+  }
+
+  h2 {
+    font-size: 4vw !important;
+  }
+
   ph-testimonial-image-circle {
     width: 90vw;
     --circle-diameter: 90px;

@@ -41,12 +41,17 @@
       transition: all 0.6s 0.4s ease-in;
 
       article {
-        margin-top: -10vw;
+        margin-top: -6vw;
         h3 {
           font-family: Poppins;
           font-size: 3vw;
           margin-bottom: 1.4rem;
           text-transform: uppercase;
+        }
+        i {
+          display: block;
+          font-size: smaller;
+          text-transform: capitalize;
         }
         .text-content {
           font-size: 1.3vw;

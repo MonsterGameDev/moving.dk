@@ -17,24 +17,24 @@ class Testimonials {
     <div class="testimonial-list">
       <ph-testimonial-image-circle id="first">
         <span slot="image-label">Per Høyer</span>
-        <span slot="testimonial-heading">Lot of niceness</span>
-        This is the default slot-text. This is the default slot-text. This is the default slot-text. This is the default slot-text. This is the default slot-text. 
-      </ph-testimonial-image-circle>
+        <span slot="testimonial-heading">God oplevelse</span>
+        God og tryg oplevelse. Utroligt imødekommende og prof. Kan klart anbefales.  
+        </ph-testimonial-image-circle>
       <ph-testimonial-image-circle id="second">
-        <span slot="image-label">Alexei</span>
-        <span slot="testimonial-heading">Lot of niceness</span>
-        This is the default slot-text. This is the default slot-text. This is the default slot-text. This is the default slot-text. This is the default slot-text. 
-      </ph-testimonial-image-circle>
+        <span slot="image-label">Rasmus Schultze</span>
+        <span slot="testimonial-heading">Fantastisk service</span>
+        Rare flyttemæne og en fremragende pris. Tak for et godt stykke arbejde! Det bliver ikke sidste gang i hører fra mig  
+        </ph-testimonial-image-circle>
       <ph-testimonial-image-circle id="third">
-        <span slot="image-label">Lea Høyer</span>
-        <span slot="testimonial-heading">Lot of niceness</span>
-        This is the default slot-text. This is the default slot-text. This is the default slot-text. This is the default slot-text. This is the default slot-text. 
-      </ph-testimonial-image-circle>
+        <span slot="image-label">Sean Murphey</span>
+        <span slot="testimonial-heading">Mange tak</span>
+        Kan virkelig anbefale Moving DK.   
+        </ph-testimonial-image-circle>
       <ph-testimonial-image-circle id="fourth">
-        <span slot="image-label">Cecilie Stensnæs </span>
-        <span slot="testimonial-heading">Lot of niceness</span>
-        This is the default slot-text. This is the default slot-text. This is the default slot-text. This is the default slot-text. This is the default slot-text. 
-      </ph-testimonial-image-circle>
+        <span slot="image-label">Marie-Louise Rosted </span>
+        <span slot="testimonial-heading">Skal du flytte</span>
+        Disse gutter flyttede for os i sommer. Super folk!!    
+        </ph-testimonial-image-circle>
     </div>
         `;
 
@@ -47,15 +47,15 @@ class Testimonials {
     }
     const testimonial_2 = document.getElementById('second');
     testimonial_2.config = {
-      profileImage: profileImages.default.PROFILE_PIC_2,
+      profileImage: profileImages.default.PROFILE_RASMUS,
     }
     const testimonial_3 = document.getElementById('third');
     testimonial_3.config = {
-      profileImage: profileImages.default.PROFILE_PIC_3,
+      profileImage: profileImages.default.PROFILE_SEAN,
     }
     const testimonial_4 = document.getElementById('fourth');
     testimonial_4.config = {
-      profileImage: profileImages.default.PROFILE_PIC_4,
+      profileImage: profileImages.default.PROFILE_ML,
     }
   }
 

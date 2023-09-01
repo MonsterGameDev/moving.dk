@@ -198,3 +198,11 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .pic2 {
+    &-text {
+      font-size: 3vw !important;
+    }
+  }
+}

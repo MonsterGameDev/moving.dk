@@ -143,7 +143,7 @@
     }
     &-text {
       color: #ccc;
-      font-family: PoppinsLight;
+      font-family: PoppinsNormal !important;
       padding: 0 3rem;
       font-size: calc(1vw + 0.3rem);
       text-align: center;
@@ -203,6 +203,7 @@
   .pic2 {
     &-text {
       font-size: 3vw !important;
+      font-weight: bolder !important;
     }
   }
 }

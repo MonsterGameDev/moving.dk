@@ -1,0 +1,16 @@
+.fixed-box {
+  width: 400px;
+  height: 50px;
+  border: 2px solid black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 9000;
+
+  color: whitesmoke;
+  padding: 10px;
+}

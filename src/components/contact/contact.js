@@ -47,9 +47,9 @@ class ContactForm {
             <div id="text-content">
                 <div id="data">
                     <span>Moving DK</span>
-                    <span>Alex Semenov</span>
-                    <span>Tlf.: 33 44 55 55</span>
-                    <span>E-mail</span>
+                    <span>Alexei Semenov Egholm</span>
+                    <span>Tlf.: 26 44 56 00</span>
+                    <span>E-mail: weare@moving.dk</span>
                     <span>Cvr.: 42432369</span>
                 </div>
                 <div id="social-links">

@@ -6,6 +6,7 @@ import ContactForm from './components/contact/contact.js';
 import './web-components/testimonial-image-circle.js'
 import Testimonials from './components/testimonials/testimonials.js';
 import FixedCtaBox from './components/fixed-cta-box/fixed-cta-box';
+import Galleri from './components/galleri/galleri.js';
 
 const ctabox = new FixedCtaBox();
 ctabox.render();
@@ -18,6 +19,9 @@ showCaseSection.render();
 
 const testimonialsSection = new Testimonials();
 testimonialsSection.render();
+
+const galleriSection = new Galleri();
+galleriSection.render();
 
 const contactSection = new ContactForm();
 contactSection.render();

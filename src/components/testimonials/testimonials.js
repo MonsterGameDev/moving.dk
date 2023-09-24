@@ -16,9 +16,9 @@ class Testimonials {
     <h2>Vores Kunder</h2>
     <div class="testimonial-list">
       <ph-testimonial-image-circle id="first">
-        <span slot="image-label">Per Høyer</span>
+        <span slot="image-label">Lisbet Haas</span>
         <span slot="testimonial-heading">God oplevelse</span>
-        God og tryg oplevelse. Utroligt imødekommende og prof. Kan klart anbefales.  
+        Det var en dejlig oplevelse at se moving.dk arbejde. De var effektive, venlige og virkelig dygtige til at pakke bilen.
         </ph-testimonial-image-circle>
       <ph-testimonial-image-circle id="second">
         <span slot="image-label">Rasmus Schultze</span>

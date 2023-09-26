@@ -23,6 +23,11 @@ class Galleri {
             <img id="g-pic8" class="galleri-image">
             <img id="g-pic9" class="galleri-image">
             <img id="g-pic10" class="galleri-image">
+            <img id="g-pic11" class="galleri-image">
+            <img id="g-pic12" class="galleri-image">
+            <img id="g-pic13" class="galleri-image">
+            <img id="g-pic14" class="galleri-image">
+            <img id="g-pic15" class="galleri-image">
         </div>     
         `;
 
@@ -38,6 +43,11 @@ class Galleri {
         document.getElementById('g-pic8').src = galleri.GALLERI_8;
         document.getElementById('g-pic9').src = galleri.GALLERI_9;
         document.getElementById('g-pic10').src = galleri.GALLERI_10;
+        document.getElementById('g-pic11').src = galleri.GALLERI_11;
+        document.getElementById('g-pic12').src = galleri.GALLERI_12;
+        document.getElementById('g-pic13').src = galleri.GALLERI_13;
+        document.getElementById('g-pic14').src = galleri.GALLERI_14;
+        document.getElementById('g-pic15').src = galleri.GALLERI_15;
     }
 }
 

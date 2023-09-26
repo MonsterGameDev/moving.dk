@@ -13,7 +13,10 @@ class FixedCtaBox {
         <h3>Kontakt</h3>
         `;
 
+        //
+
         body.appendChild(this.ctabox);
+        this.ctabox.addEventListener('click', () => window.scrollTo(0, document.body.scrollHeight));
     }
 }
 

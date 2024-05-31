@@ -22,8 +22,8 @@ class Testimonials {
         </ph-testimonial-image-circle>
       <ph-testimonial-image-circle id="second">
         <span slot="image-label">Rasmus Schultze</span>
-        <span slot="testimonial-heading">Fantastisk service</span>
-        Rare flyttemæne og en fremragende pris. Tak for et godt stykke arbejde! Det bliver ikke sidste gang i hører fra mig  
+        <span slot="testimonial-heading">Fantastisk</span>
+        Rare flyttemænd og en fremragende pris. Tak for et godt stykke arbejde! Det bliver ikke sidste gang i hører fra mig  
         </ph-testimonial-image-circle>
       <ph-testimonial-image-circle id="third">
         <span slot="image-label">Sean Murphey</span>

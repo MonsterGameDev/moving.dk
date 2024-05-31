@@ -9,11 +9,6 @@ class FixedCtaBox {
         const body = document.querySelector('body');
         this.ctabox = document.createElement('div');
         this.ctabox.classList.add('fixed-box')
-        this.ctabox.innerHTML = `
-        <h3>Kontakt</h3>
-        `;
-
-        //
 
         body.appendChild(this.ctabox);
         this.ctabox.addEventListener('click', () => window.scrollTo(0, document.body.scrollHeight));
